@@ -12,6 +12,10 @@
 		6E13E16422EC3CA400633960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E13E16222EC3CA400633960 /* Main.storyboard */; };
 		6E13E16622EC3CA600633960 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E13E16522EC3CA600633960 /* Assets.xcassets */; };
 		6E13E16922EC3CA600633960 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E13E16722EC3CA600633960 /* LaunchScreen.storyboard */; };
+		6E13E17122EC749000633960 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E13E17022EC749000633960 /* MapViewController.swift */; };
+		6E13E17422EC765900633960 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E13E17322EC765900633960 /* MapKit.framework */; };
+		6E30EF0522EC811C004F6B1E /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E30EF0422EC811C004F6B1E /* Places.plist */; };
+		6E30EF0722EC8136004F6B1E /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E30EF0622EC8136004F6B1E /* Places.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		6E13E16522EC3CA600633960 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E13E16822EC3CA600633960 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E13E16A22EC3CA600633960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E13E17022EC749000633960 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		6E13E17322EC765900633960 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6E30EF0422EC811C004F6B1E /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Places.plist; sourceTree = "<group>"; };
+		6E30EF0622EC8136004F6B1E /* Places.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E13E17422EC765900633960 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,7 @@
 			children = (
 				6E13E15D22EC3CA400633960 /* MapKit_Test2 */,
 				6E13E15C22EC3CA400633960 /* Products */,
+				6E13E17222EC765900633960 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +66,23 @@
 			children = (
 				6E13E15E22EC3CA400633960 /* AppDelegate.swift */,
 				6E13E16022EC3CA400633960 /* ViewController.swift */,
+				6E13E17022EC749000633960 /* MapViewController.swift */,
+				6E30EF0622EC8136004F6B1E /* Places.swift */,
 				6E13E16222EC3CA400633960 /* Main.storyboard */,
 				6E13E16522EC3CA600633960 /* Assets.xcassets */,
 				6E13E16722EC3CA600633960 /* LaunchScreen.storyboard */,
+				6E30EF0422EC811C004F6B1E /* Places.plist */,
 				6E13E16A22EC3CA600633960 /* Info.plist */,
 			);
 			path = MapKit_Test2;
+			sourceTree = "<group>";
+		};
+		6E13E17222EC765900633960 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E13E17322EC765900633960 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +117,11 @@
 				TargetAttributes = {
 					6E13E15A22EC3CA400633960 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -124,6 +150,7 @@
 			files = (
 				6E13E16922EC3CA600633960 /* LaunchScreen.storyboard in Resources */,
 				6E13E16622EC3CA600633960 /* Assets.xcassets in Resources */,
+				6E30EF0522EC811C004F6B1E /* Places.plist in Resources */,
 				6E13E16422EC3CA400633960 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E13E16122EC3CA400633960 /* ViewController.swift in Sources */,
+				6E13E17122EC749000633960 /* MapViewController.swift in Sources */,
 				6E13E15F22EC3CA400633960 /* AppDelegate.swift in Sources */,
+				6E30EF0722EC8136004F6B1E /* Places.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
