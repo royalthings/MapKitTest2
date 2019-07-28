@@ -19,8 +19,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         closeBtn.layer.cornerRadius = 4
-        
-        
+  
         if let selectPlace = place {
             let regionRadius: CLLocationDistance = 1000.0
             let coordinateRegion = MKCoordinateRegion(center: selectPlace.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
